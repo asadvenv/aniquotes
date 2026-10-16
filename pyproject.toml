@@ -4,13 +4,13 @@ build-backend = "hatchling.build"
 
 [project]
 name = "aniquotes"
-version = "0.2.0"
+version = "0.2.1"
 description = "A lightweight Python package to generate and search 13,000+ anime quotes from popular characters and shows."
 readme = "README.md"
 license = { text = "Unlicense" }
 authors = [
     { name = "Asadul Islam" },
-    { email = "mr.asadul.islam00@gmail.com" }
+    { email = "asadnuts@gmail.com" }
 ]
 keywords = ["anime", "quotes", "anime-quotes", "otaku", "manga"]
 classifiers = [
@@ -20,8 +20,8 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/asadofc/aniquotes"
-Repository = "https://github.com/asadofc/aniquotes"
+Homepage = "https://github.com/asadvenv/aniquotes"
+Repository = "https://github.com/asadvenv/aniquotes"
 
 [tool.hatch.build.targets.wheel]
 packages = ["aniquotes"]
