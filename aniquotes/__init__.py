@@ -1,17 +1,17 @@
 from aniquotes.quotes import (
-    getCharacters,
-    getQuote,
-    getQuotes,
-    getShows,
-    getTotalCount,
+    get_characters,
+    get_quote,
+    get_quotes,
+    get_shows,
+    get_total_count,
 )
 
-__version__ = "0.1.5"
+__version__ = "0.2.0"
 
 __all__ = [
-    "getQuote",
-    "getQuotes",
-    "getCharacters",
-    "getShows",
-    "getTotalCount",
+    "get_quote",
+    "get_quotes",
+    "get_characters",
+    "get_shows",
+    "get_total_count",
 ]

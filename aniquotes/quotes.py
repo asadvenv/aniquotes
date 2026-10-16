@@ -3,7 +3,7 @@ from typing import Dict, List, Optional
 
 from aniquotes.data import QUOTES
 
-def filterQuotes(
+def filter_quotes(
     character: Optional[str] = None,
     show: Optional[str] = None,
     search: Optional[str] = None,
@@ -28,36 +28,36 @@ def filterQuotes(
 
     return results
 
-def getQuote(
+def get_quote(
     character: Optional[str] = None,
     show: Optional[str] = None,
     search: Optional[str] = None,
 ) -> Optional[Dict[str, str]]:
     """Returns a single random anime quote matching the given criteria."""
-    matches = filterQuotes(character=character, show=show, search=search)
+    matches = filter_quotes(character=character, show=show, search=search)
     return choice(matches) if matches else None
 
-def getQuotes(
+def get_quotes(
     character: Optional[str] = None,
     show: Optional[str] = None,
     search: Optional[str] = None,
     limit: Optional[int] = None,
 ) -> List[Dict[str, str]]:
     """Returns a list of anime quotes matching the given criteria."""
-    matches = filterQuotes(character=character, show=show, search=search)
+    matches = filter_quotes(character=character, show=show, search=search)
     if limit is not None and limit > 0:
         return matches[:limit]
     return matches
 
-def getCharacters(show: Optional[str] = None) -> List[str]:
+def get_characters(show: Optional[str] = None) -> List[str]:
     """Returns a sorted list of unique character names."""
-    quotes = filterQuotes(show=show)
+    quotes = filter_quotes(show=show)
     return sorted({item["character"] for item in quotes if item.get("character")})
 
-def getShows() -> List[str]:
+def get_shows() -> List[str]:
     """Returns a sorted list of all unique anime show titles."""
     return sorted({item["show"] for item in QUOTES if item.get("show")})
 
-def getTotalCount() -> int:
+def get_total_count() -> int:
     """Returns the total number of anime quotes available."""
     return len(QUOTES)
